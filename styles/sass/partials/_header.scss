@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+header {
+    .flexContainer {
+        @include flex (row, nowrap, center, center);
+    }
+
+    .textContainer {
+        width: 60%;
+    }
+    
+    .imgContainer {
+        width: 40%;
+    }
+}

@@ -1,0 +1,75 @@
+@use "variables" as *;
+
+// Extra Stripping Styles:
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+// Base Styles:
+body {
+    overflow-x: hidden;
+    background-color: $primaryColour;
+}
+
+.wrapper {
+    max-width: 1560px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    margin-left: 10px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: $secondaryColour;
+        border-radius: 50%;
+        position: absolute;
+        left: -15px;
+        top: 0px;
+        z-index: -1;
+    }
+    
+    &::after {
+        content: "⟶";
+        margin: 0 10px;
+        font-size: 1.45rem;
+        color: $quaternaryColour;
+    }
+    
+    &:hover {
+        &::before {
+            width: 110%;
+            border-radius: 35px;
+            transition: 500ms;
+        }
+    }
+}
+
+.arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    &::after {
+        content: "⟶";
+        margin: 0 10px;
+        font-size: 1.45rem;
+        color: $quaternaryColour;
+    }
+}

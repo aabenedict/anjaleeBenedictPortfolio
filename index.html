@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
+    <title>Home | Anjalee Benedict</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <p class="arrow">Scroll Down</p>
+    <!-- Header HTML -->
+    <header>
+        <div class="wrapper">
+            <nav>
+                <button class="navIcon fa-solid fa-bars">
+                    <p class="sr-only">click here to open slide-out menu</p>
+                </button> <!-- .navIcon ends -->
+                <ul class="navBar">
+                    <li class="logo">
+                        <img src="./assets/logo.png" alt="logo image which is the developer's initials">
+                    </li>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about" title="Go to about section">About</a></li>
+                        <li><a href="#projects" title="Go to projects section">Projects</a></li>
+                        <li><a href="#contact" title="Go to contact section">Contact</a></li>
+                    </ul>
+                </ul> <!-- .navBar ends -->
+            </nav>
+            <div class="flexContainer">
+                <div class="textContainer">
+                    <h1><span>I'm a</span>Front-End Developer.</h1>
+                    <a href="#projects" title="Go to projects section" class="button">See My Work</a>
+                </div>
+                <div class="imgContainer">
+                    <img src="./assets/profile.png" alt="profile photo">
+                </div> <!-- .imgContainer ends -->
+            </div> <!-- .flexContainer ends -->
+        </div> <!-- .wrapper ends -->
+    
+        <!-- Markup for Slide Out Nav -->
+        <div class="slideOutNav hide" id="slideOutNavElement">
+            <div class="buttonContainer">
+                <button><i class="fa-solid fa-xmark"></i></button>
+            </div> <!-- .buttonContainer ends -->
+            <nav>
+                <ul>
+                    <li><a href="#" class="navHover">Home</a></li>
+                    <li><a href="#about" title="Go to about section" class="navHover">About</a></li>
+                    <li><a href="#projects" title="Go to projects section" class="navHover">Projects</a></li>
+                    <li><a href="#contact" title="Go to contact section" class="navHover">Contact</a></li>
+                </ul>
+            </nav>
+        </div> <!-- .slideOutNav .hide ends -->
+    </header>
+    <!-- Header HTML ends -->
+    
+    <!-- Main HTML -->
+    <main>
+        <section class="about">
+            <div class="wrapper">
+                <h2 class="titleShadow">About</h2>
+                <div class="aboutDescriptionBox">
+                    <h3>Hi! My name is <span>Anjalee Benedict</span></h3>
+                    <ul class="socialFlex">
+                        <li class="socials"><i class="fa-brands fa-twitter"></i></li>
+                        <li class="socials"><i class="fa-brands fa-linkedin-in"></i></li>
+                        <li class="socials"><i class="fa-brands fa-github"></i></li>
+                        <li class="socials"><i class="fa-solid fa-envelope"></i></li>
+                        <li class="socials"><i class="fa-brands fa-medium"></i></li>
+                    </ul> <!-- .socialFlex ends -->
+                    <div class="aboutDescription">
+                        <p>I'm a Front-End Web Developer looking to improve people's lives through technology. I have a passion for learning, and
+                        am constantly improving my coding skills to build the best interactive, responsive, accessible web applications using
+                        JavaScript (ES6+), JQuery, React, REST APIs, CSS3, and HTML5.</p>
+                        <p>Coming from a background in biomedical sciences, I have developed the ability to conduct thorough research on a given
+                        problem, troubleshoot, then break down those complex ideas and communicate them in an effective way. When I'm not
+                        coding, I enjoy writing and producing music on Ableton Live 11!</p>
+                    </div> <!-- .aboutDescription ends -->
+                </div> <!-- .aboutDescriptionBox ends -->
+            </div> <!-- .wrapper ends -->
+        </section> <!-- .about ends -->
+        <section class="skills wrapper">
+            <h2 class="titleShadow">Skills</h2>
+            <ul>
+                <li>
+                    <i class="fa-brands fa-square-js"></i>
+                    <p>javascript + es6</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>css3</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-html5"></i>
+                    <p>html5</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-sass"></i>
+                    <p>Sass</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-react"></i>
+                    <p>react</p>
+                </li>
+                <li>
+                    <i class="fa-regular fa-universal-access"></i>
+                    <p>accessibility</p>
+                </li>
+                <li>
+                    <i class="fa-regular fa-square-terminal"></i>
+                    <p>terminal</p>
+                </li>
+                <li>
+                    <i class="fa-regular fa-laptop-mobile"></i>
+                    <p>responsive design</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-git-alt"></i>
+                    <p>git</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-database"></i>
+                    <p>firebase</p>
+                </li>
+                <li>
+                    <i class="fa-regular fa-network-wired"></i>
+                    <p>rest apis</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-q"></i>
+                    <p>jquery</p>
+                </li>
+            </ul>
+        </section> <!-- .skills .wrapper ends -->
+        <section class="projectBackground">
+            <h2 class="titleShadow">Projects</h2>
+            <div class="project">
+                <div class="wrapper">
+                    <h4><span>01. </span>tasty-table</h4>
+                    <div class="projectProfile">
+                        <img src="./assets/tastyTable.png" alt="image of tasty-table project">
+                        <div class="projectDescription">
+                            <p>A web app that generates one random recipe (using the Tasty API), based on a name of an ingredient or dish.
+                            </p>
+                            <a href="https://tasty-table.netlify.app/" class="button">View Live Link</a>
+                        </div> <!-- .projectDescription -->
+                        <div class="projectTools">
+                            <p>Made with:</p>
+                            <ul>
+                                <li><i class="fa-brands fa-html5"></i></li>
+                                <li><i class="fa-brands fa-sass"></i></li>
+                                <li><i class="fa-brands fa-square-js"></i></li>
+                                <li><i class="fa-regular fa-network-wired"></i></li>
+                            </ul>
+                            <a href="https://github.com/tastyTable/tastyTableApp" class="button">View Github</a>
+                        </div> <!-- .projectTools ends -->
+                    </div> <!-- .projectProfile ends -->
+                </div> <!-- .wrapper ends -->
+            </div> <!-- .project ends -->
+        </section>
+        <section class="contact wrapper">
+            <h2 class="titleShadow">Contact</h2>
+            <form action="">
+                <label for="name" class="sr-only">Your Name</label>
+                <input id="name" type="text" placeholder="Your Name" class="input">
+                <label for="email" class="sr-only">Your Email</label>
+                <input id="email" type="email" placeholder="Your Email" class="input">
+                <label for="subject" class="sr-only">Subject</label>
+                <input id="subject" type="text" placeholder="Subject" class="input">
+                <label for="message" class="sr-only">Message</label>
+                <input id="message" type="textarea" placeholder="Message" class="input">
+                <button class="button">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <!-- Main HTML ends -->
+    
+    <!-- Footer HTML -->
+    <footer>
+        <p>Copyright © 2022 <a href="https://junocollege.com/">Juno College</a></p>
+    </footer>
+    <!-- Footer HTML ends -->
+    
+    <!-- Linked JS file -->
+    <script src="./script.js"></script>
+</body>
+</html>
