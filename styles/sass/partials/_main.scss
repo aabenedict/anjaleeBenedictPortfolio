@@ -2,7 +2,8 @@
 @use "mixins" as *;
 
 .about {
-    @include titleShadow ("About")
+    @include titleShadow ("About");
+    padding: 50px 0;
 }
 
 .aboutDescriptionBox {
@@ -59,9 +60,10 @@
         }
     
         p {
-            font-size: clamp(0.8rem, 3vw, 1rem);
-            line-height: clamp(0.9rem, 3vw, 1.2rem);
+            font-size: clamp(0.7rem, 1.5vw, 1rem);
+            line-height: clamp(0.8rem, 1.5vw, 1.2rem);
             padding-top: 15px;
+            text-align: center
         }
     }
 }
@@ -111,9 +113,47 @@
             }
         }
     }
-    .stackingOrder {
-        position: relative;
-        z-index: 1;
-    }
 }
 
+.stackingOrder {
+    position: relative;
+    z-index: 1;
+}
+
+.contact {
+    @include titleShadow ("Contact");
+    background-color: $whiteColor;
+    padding: 50px 0;
+    form {
+        margin-top: 50px;
+        @include flex (row, wrap);
+        .text {
+            width: calc(50% - 20px);
+            padding: 10px;
+            margin: 10px;
+            &:hover, &:focus {
+                border: 2px solid $quaternaryColour;
+            }
+        }
+        .message {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px;
+            &:hover, &:focus {
+                border: 2px solid $quaternaryColour;
+            }
+        }
+        button {
+            border: none;
+            background: none;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $fontColour;
+            opacity: 1;
+            /* Firefox */
+        }
+    }
+}

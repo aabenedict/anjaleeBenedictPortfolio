@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+footer {
+    padding: 20px 0;
+    p {
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 1px;
+        text-align: center;
+        a {
+            color: $fontAltColour;
+        }
+    }
+}
