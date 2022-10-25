@@ -809,15 +809,35 @@ header .imgContainer {
           align-items: flex-start;
 }
 .projectProfile .imgContainer {
-  width: calc(33.33% - 20px);
-  margin: 20px 20px 20px 0;
+  width: calc(30% - 20px);
+  margin: 40px 20px 40px 0;
   padding: 20px 0;
   height: 300px;
 }
-.projectProfile .projectDescription {
-  width: calc(33.33% - 20px);
+.projectProfile .projectDescriptionBox {
+  width: calc(70% - 20px);
   margin: 20px;
-  padding: 20px 20px 0;
+  padding: 20px 0;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+.projectProfile .projectDescription {
+  width: calc(50% - 20px);
+  padding: 20px 0px 0 40px;
   height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,8 +856,7 @@ header .imgContainer {
           align-items: space-between;
 }
 .projectProfile .projectTools {
-  width: calc(33.33% - 20px);
-  margin: 20px 0px 20px 20px;
+  width: calc(50% - 20px);
   padding: 20px 20px 0;
   height: 250px;
   display: -webkit-box;
@@ -989,4 +1008,187 @@ footer p {
 }
 footer p a {
   color: #302F2F;
+}
+
+/* all of our styles for DESKTOP devices will go within this breakpoint */
+@media (max-width: 1200px) {
+  .projectProfile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .projectProfile .imgContainer {
+    width: 50%;
+  }
+  .projectProfile .projectDescriptionBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    width: 50%;
+  }
+  .projectProfile .projectDescription, .projectProfile .projectTools {
+    width: 100%;
+    padding: 20px;
+  }
+  .stackingOrder {
+    margin-top: 10px;
+  }
+}
+/* all of our styles for TABLET devices will go within this breakpoint */
+@media (max-width: 915px) {
+  .aboutDescription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .aboutDescription p {
+    width: calc(100% - 20px);
+  }
+  .skills ul {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .skills li {
+    width: calc(33.33% - 20px);
+    margin: 20px 10px;
+  }
+  .projectProfile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .projectProfile .imgContainer {
+    width: auto;
+    height: 300px;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .projectProfile .imgContainer img {
+    width: 100%;
+    height: 100%;
+  }
+  .projectProfile .projectDescriptionBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .projectProfile .projectDescription,
+.projectProfile .projectTools {
+    width: 100%;
+    padding: 20px;
+  }
+  .contact form .text {
+    width: calc(100% - 20px);
+  }
+}
+/* all of our styles for large MOBILE devices will go within this breakpoint */
+@media (max-width: 830px) {
+  header nav .navIcon {
+    display: block;
+  }
+  header nav .navBar ul {
+    display: none;
+  }
+}
+/* all of our styles for small MOBILE devices will go within this breakpoint */
+@media (max-width: 730px) {
+  html {
+    font-size: 100%;
+  }
+  header .flexContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  header .textContainer {
+    width: 100%;
+  }
+  header .imgContainer {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .wrapper {
+    width: 95%;
+  }
 }
