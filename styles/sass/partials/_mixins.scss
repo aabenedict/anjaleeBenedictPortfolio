@@ -8,3 +8,24 @@
     justify-content: $mainAxis;
     align-items: $crossAxis;
 }
+
+// Mixin for h2 shadow
+@mixin titleShadow ($title) {
+    .titleShadow {
+        position: relative;
+        
+        &::before {
+            content: $title;
+            font-size: 4.75rem;
+            line-height: 4.5rem;
+            letter-spacing: 3px;
+            color: $tertiaryColour;
+            opacity: 0.1;
+            position: absolute;
+            text-align: center;
+            left: -10px;
+            right: 0;
+            top: -13px;
+        }
+    }
+}

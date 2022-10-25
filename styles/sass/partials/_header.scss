@@ -2,6 +2,8 @@
 @use "mixins" as *;
 
 header {
+    position: relative;
+    margin-bottom: 100px;
     .flexContainer {
         @include flex (row, nowrap, center, center);
     }

@@ -1,0 +1,73 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.about {
+    @include titleShadow ("About")
+}
+
+.aboutDescriptionBox {
+    background-color: $secondaryColour;
+    margin: 50px 25px 100px;
+    padding: 25px;
+}
+
+.socialFlex {
+    @include flex (row, nowrap, center, center)
+}
+
+.socials {
+    a {
+        color: $quaternaryColour;
+    }
+    height: 40px;
+    width: 40px;
+    font-size: 1.25rem;
+    padding: 10px;
+    margin: 20px 5px;
+    border: 2.35px solid $quaternaryColour;
+    border-radius: 50%;
+    @include flex (row, nowrap, center, center);
+}
+
+.aboutDescription {
+    @include flex (row, wrap);
+    p {
+        width: calc(50% - 20px);
+        margin: 10px 10px;
+    }
+}
+
+.skills {
+    @include titleShadow ("Skills");
+    background-color: $whiteColor;
+    padding: 50px 0;
+    ul {
+        @include flex (row, wrap);
+        margin: 50px 25px 0;
+        padding: 0 50px;
+    }
+    li {
+        @include flex (column, nowrap, center, center);
+        margin: 20px 20px;
+        width: calc(25% - 40px);
+        i {
+            font-size: 4rem;
+            color: $fontAltColour;
+            &:hover, &:focus {
+                color: $quaternaryColour;
+            }
+        }
+    
+        p {
+            font-size: clamp(0.8rem, 3vw, 1rem);
+            line-height: clamp(0.9rem, 3vw, 1.2rem);
+            padding-top: 15px;
+        }
+    }
+}
+
+.projectBackground {
+    @include titleShadow ("Projects");
+    background-color: $primaryColour;
+    padding: 50px 0;
+}

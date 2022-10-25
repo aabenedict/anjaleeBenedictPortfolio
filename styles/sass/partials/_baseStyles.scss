@@ -60,16 +60,3 @@ img {
         }
     }
 }
-
-.arrow {
-    display: inline-block;
-    transform: rotate(90deg);
-    position: absolute;
-    right: 0;
-    &::after {
-        content: "⟶";
-        margin: 0 10px;
-        font-size: 1.45rem;
-        color: $quaternaryColour;
-    }
-}

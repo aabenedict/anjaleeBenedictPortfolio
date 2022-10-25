@@ -282,20 +282,6 @@ h2 {
   letter-spacing: 3px;
   color: #737373;
   text-align: center;
-  position: relative;
-}
-h2::before {
-  content: "About";
-  font-size: 4.75rem;
-  line-height: 4.5rem;
-  letter-spacing: 3px;
-  color: #737373;
-  opacity: 0.1;
-  position: absolute;
-  text-align: center;
-  left: -10px;
-  right: 0;
-  top: -13px;
 }
 
 h3 {
@@ -337,7 +323,7 @@ input {
   color: #302F2F;
 }
 
-.arrow, .button {
+.button {
   font-family: "raleway";
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -402,18 +388,8 @@ img {
   transition: 500ms;
 }
 
-.arrow {
-  display: inline-block;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  position: absolute;
-  right: 0;
-}
-.arrow::after {
-  content: "⟶";
-  margin: 0 10px;
-  font-size: 1.45rem;
-  color: #9D0909;
+nav {
+  margin-bottom: 50px;
 }
 
 .navIcon {
@@ -586,6 +562,10 @@ img {
   display: none;
 }
 
+header {
+  position: relative;
+  margin-bottom: 100px;
+}
 header .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -608,4 +588,187 @@ header .textContainer {
 }
 header .imgContainer {
   width: 40%;
+}
+
+.about .titleShadow {
+  position: relative;
+}
+.about .titleShadow::before {
+  content: "About";
+  font-size: 4.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 3px;
+  color: #737373;
+  opacity: 0.1;
+  position: absolute;
+  text-align: center;
+  left: -10px;
+  right: 0;
+  top: -13px;
+}
+
+.aboutDescriptionBox {
+  background-color: #DFDDE0;
+  margin: 50px 25px 100px;
+  padding: 25px;
+}
+
+.socialFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials {
+  height: 40px;
+  width: 40px;
+  font-size: 1.25rem;
+  padding: 10px;
+  margin: 20px 5px;
+  border: 2.35px solid #9D0909;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.socials a {
+  color: #9D0909;
+}
+
+.aboutDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+}
+.aboutDescription p {
+  width: calc(50% - 20px);
+  margin: 10px 10px;
+}
+
+.skills {
+  background-color: #FFF;
+  padding: 50px 0;
+}
+.skills .titleShadow {
+  position: relative;
+}
+.skills .titleShadow::before {
+  content: "Skills";
+  font-size: 4.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 3px;
+  color: #737373;
+  opacity: 0.1;
+  position: absolute;
+  text-align: center;
+  left: -10px;
+  right: 0;
+  top: -13px;
+}
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  margin: 50px 25px 0;
+  padding: 0 50px;
+}
+.skills li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 20px;
+  width: calc(25% - 40px);
+}
+.skills li i {
+  font-size: 4rem;
+  color: #302F2F;
+}
+.skills li i:hover, .skills li i:focus {
+  color: #9D0909;
+}
+.skills li p {
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  line-height: clamp(0.9rem, 3vw, 1.2rem);
+  padding-top: 15px;
+}
+
+.projectBackground {
+  background-color: #F4F4F4;
+  padding: 50px 0;
+}
+.projectBackground .titleShadow {
+  position: relative;
+}
+.projectBackground .titleShadow::before {
+  content: "Projects";
+  font-size: 4.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 3px;
+  color: #737373;
+  opacity: 0.1;
+  position: absolute;
+  text-align: center;
+  left: -10px;
+  right: 0;
+  top: -13px;
 }

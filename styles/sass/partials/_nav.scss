@@ -2,6 +2,10 @@
 @use "mixins" as *;
 
 // Nav Styles:
+nav {
+    margin-bottom: 50px;
+}
+
 .navIcon {
     display: none;
     padding: 10px 13px;
