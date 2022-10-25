@@ -772,3 +772,103 @@ header .imgContainer {
   right: 0;
   top: -13px;
 }
+
+.project {
+  margin-top: 50px;
+  border-bottom: 2px #DFDDE0 solid;
+}
+
+.projectProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.projectProfile .imgContainer {
+  width: calc(33.33% - 20px);
+  margin: 20px 20px 20px 0;
+  padding: 20px 0;
+  height: 300px;
+}
+.projectProfile .projectDescription {
+  width: calc(33.33% - 20px);
+  margin: 20px;
+  padding: 20px 20px 0;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+.projectProfile .projectTools {
+  width: calc(33.33% - 20px);
+  margin: 20px 0px 20px 20px;
+  padding: 20px 20px 0;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+.projectProfile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+}
+.projectProfile ul li {
+  font-size: 3rem;
+  margin: 5px 15px 0 0;
+  color: #302F2F;
+}
+.projectProfile ul li:hover, .projectProfile ul li:focus {
+  color: #9D0909;
+}
+.projectProfile .stackingOrder {
+  position: relative;
+  z-index: 1;
+}

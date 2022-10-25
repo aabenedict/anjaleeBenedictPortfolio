@@ -71,3 +71,49 @@
     background-color: $primaryColour;
     padding: 50px 0;
 }
+
+.project {
+    margin-top: 50px;
+    border-bottom: 2px $secondaryColour solid;
+}
+
+.projectProfile {
+    @include flex (row, nowrap, center, flex-start);
+    .imgContainer {
+        width: calc(33.33% - 20px);
+        margin: 20px 20px 20px 0;
+        padding: 20px 0;
+        height: 300px;
+    }
+    .projectDescription {
+        width: calc(33.33% - 20px);
+        margin: 20px;
+        padding: 20px 20px 0;
+        height: 250px;
+        @include flex (column, nowrap, space-between, space-between)
+    }
+    .projectTools {
+        width: calc(33.33% - 20px);
+        margin: 20px 0px 20px 20px;
+        padding: 20px 20px 0;
+        height: 250px;
+        @include flex (column, nowrap, space-between, space-between)
+    }
+    ul {
+        @include flex (row);
+        li {
+            font-size: 3rem;
+            margin: 5px 15px 0 0;
+            color: $fontAltColour;
+    
+            &:hover, &:focus {
+                color: $quaternaryColour;
+            }
+        }
+    }
+    .stackingOrder {
+        position: relative;
+        z-index: 1;
+    }
+}
+
