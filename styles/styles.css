@@ -1234,6 +1234,10 @@ footer p a {
   }
 }
 @media (max-width: 600px) {
+  .textContainer h1 span {
+    margin-bottom: 10px;
+    display: block;
+  }
   .projectProfile .imgContainer {
     padding: 0;
   }
@@ -1246,12 +1250,13 @@ footer p a {
   .wrapper {
     width: 95%;
   }
-  h1 {
+  .textContainer h1 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
-  h1 span {
+  .textContainer h1 span {
     margin-bottom: 7px;
+    display: block;
   }
   header nav .navBar {
     left: 30px;
