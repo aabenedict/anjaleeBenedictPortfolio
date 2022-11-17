@@ -173,8 +173,11 @@
         width: 95%;
     }
     h1 {
+        span {
+            margin-bottom: 7px;
+        }
         font-size: 2.5rem;
-        line-height: 2rem;
+        line-height: 2.5rem;
     }
     header {
         nav {

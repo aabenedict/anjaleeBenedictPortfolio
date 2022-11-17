@@ -1248,7 +1248,10 @@ footer p a {
   }
   h1 {
     font-size: 2.5rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
+  }
+  h1 span {
+    margin-bottom: 7px;
   }
   header nav .navBar {
     left: 30px;
