@@ -44,19 +44,11 @@ nav {
             border-radius: 20px;
             margin-left: 50px;
 
-            &:hover {
+            &:hover, &:focus {
                 position: relative;
                 color: $quaternaryColour;
                 background-color: $primaryColour;
-
-                &::before {
-                    content: "●";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 30px;
-                    text-align: center;
-                }
+                border: solid 2px $quaternaryColour;
             }
         }
     }
@@ -97,8 +89,8 @@ nav {
     }
 
     ul {
-        @include flex (column, nowrap, center, center);
-        padding: 40px 0 0;
+        @include flex (column, nowrap, center, flex-start);
+        padding: 40px 0 0 45px;
     }
 
     li {

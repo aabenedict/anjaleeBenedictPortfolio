@@ -84,16 +84,28 @@
 @media (max-width: 830px) {
     header {
         nav {
+            width: 90%;
+            position: fixed;
+            margin-top: 15px;
             .navIcon {
                 display: block;
+                font-size: 1.25rem;
+                right: 50px;
             }
-
             .navBar {
+                position: fixed;
+                left: 50px;
                 ul {
                     display: none;
                 }
             }
         }
+        .flexContainer {
+            padding-top: 100px;
+        }
+    }
+    .skills, .projectBackground, .contact {
+        padding-top: 100px;
     }
 }
 
@@ -101,6 +113,10 @@
 @media (max-width: 730px) {
     html {
         font-size: 100%;
+    }
+    h1 {
+        font-size: 4.65rem;
+        line-height: 4rem;
     }
     header {
         .flexContainer {
@@ -113,10 +129,65 @@
             display: none;
         }
     }
+    .button {
+        &::before {
+            top: -4px;
+        }
+    }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3.25rem;
+        line-height: 3rem;
+    }
+    header {
+        nav {
+            .navBar {
+                left: 30px;
+            }
+            .navIcon {
+                right: 30px;
+            }           
+        }
+    }
+    .projectProfile {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .projectProfile {
+        .imgContainer {
+            padding: 0;
+        }
+        .projectDescription {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 390px) {
     .wrapper {
         width: 95%;
+    }
+    h1 {
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+    header {
+        nav {
+            .navBar {
+                left: 30px;
+            }
+    
+            .navIcon {
+                right: 0;
+            }
+        }
+        .textContainer {
+            margin: 0 40px;
+        }
     }
 }

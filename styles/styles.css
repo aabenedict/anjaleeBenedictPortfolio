@@ -277,7 +277,7 @@ h1 span {
 
 h2 {
   font-family: "raleway";
-  font-size: 3.25rem;
+  font-size: clamp(2.85rem, 7vw, 3.25rem);
   line-height: 3rem;
   letter-spacing: 3px;
   color: #737373;
@@ -368,8 +368,6 @@ img {
 .button {
   display: inline-block;
   position: relative;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   margin-left: 10px;
 }
 .button::before {
@@ -383,14 +381,18 @@ img {
   left: -15px;
   top: 0px;
   z-index: -1;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 .button::after {
   content: "⟶";
   margin: 0 10px;
   font-size: 1.45rem;
   color: #9D0909;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
-.button:hover::before {
+.button:hover::before, .button:focus::before {
   width: 110%;
   border-radius: 35px;
   -webkit-transition: 500ms;
@@ -466,18 +468,11 @@ nav {
   border-radius: 20px;
   margin-left: 50px;
 }
-.navBar ul a:hover {
+.navBar ul a:hover, .navBar ul a:focus {
   position: relative;
   color: #9D0909;
   background-color: #F4F4F4;
-}
-.navBar ul a:hover::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30px;
-  text-align: center;
+  border: solid 2px #9D0909;
 }
 
 .slideOutNav {
@@ -540,10 +535,10 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px 0 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 40px 0 0 45px;
 }
 .slideOutNav li {
   padding-bottom: 50px;
@@ -670,26 +665,32 @@ header .imgContainer {
 .socials a {
   color: #9D0909;
 }
+.socials a:hover, .socials a:focus {
+  color: #737373;
+}
+.socials:hover, .socials:focus {
+  border: 3.35px solid #737373;
+}
 
 .aboutDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .aboutDescription p {
-  width: calc(50% - 20px);
+  width: calc(100% - 20px);
   margin: 10px 10px;
 }
 
@@ -813,6 +814,10 @@ header .imgContainer {
   margin: 40px 20px 40px 0;
   padding: 20px 0;
   height: 300px;
+}
+.projectProfile .imgContainer img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .projectProfile .projectDescriptionBox {
   width: calc(70% - 20px);
@@ -1151,17 +1156,38 @@ footer p a {
 }
 /* all of our styles for large MOBILE devices will go within this breakpoint */
 @media (max-width: 830px) {
+  header nav {
+    width: 90%;
+    position: fixed;
+    margin-top: 15px;
+  }
   header nav .navIcon {
     display: block;
+    font-size: 1.25rem;
+    right: 50px;
+  }
+  header nav .navBar {
+    position: fixed;
+    left: 50px;
   }
   header nav .navBar ul {
     display: none;
+  }
+  header .flexContainer {
+    padding-top: 100px;
+  }
+  .skills, .projectBackground, .contact {
+    padding-top: 100px;
   }
 }
 /* all of our styles for small MOBILE devices will go within this breakpoint */
 @media (max-width: 730px) {
   html {
     font-size: 100%;
+  }
+  h1 {
+    font-size: 4.65rem;
+    line-height: 4rem;
   }
   header .flexContainer {
     display: -webkit-box;
@@ -1186,9 +1212,51 @@ footer p a {
   header .imgContainer {
     display: none;
   }
+  .button::before {
+    top: -4px;
+  }
 }
-@media (max-width: 350px) {
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.25rem;
+    line-height: 3rem;
+  }
+  header nav .navBar {
+    left: 30px;
+  }
+  header nav .navIcon {
+    right: 30px;
+  }
+  .projectProfile {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .projectProfile .imgContainer {
+    padding: 0;
+  }
+  .projectProfile .projectDescription {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 390px) {
   .wrapper {
     width: 95%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  header nav .navBar {
+    left: 30px;
+  }
+  header nav .navIcon {
+    right: 0;
+  }
+  header .textContainer {
+    margin: 0 40px;
   }
 }

@@ -29,7 +29,6 @@ img {
 .button {
     display: inline-block;
     position: relative;
-    transition: 0.5s;
     margin-left: 10px;
 
     &::before {
@@ -43,6 +42,7 @@ img {
         left: -15px;
         top: 0px;
         z-index: -1;
+        transition: 500ms;
     }
     
     &::after {
@@ -50,9 +50,10 @@ img {
         margin: 0 10px;
         font-size: 1.45rem;
         color: $quaternaryColour;
+        transition: 500ms;
     }
     
-    &:hover {
+    &:hover, &:focus {
         &::before {
             width: 110%;
             border-radius: 35px;
